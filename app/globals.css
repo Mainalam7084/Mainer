@@ -1,0 +1,35 @@
+@config "../tailwind.config.ts";
+@import "tailwindcss";
+
+:root {
+  --bg-main: #0F0F14;
+  --bg-card: #1A1A22;
+  --bg-soft: #22222C;
+  --color-primary: #7C5CFF;
+  --color-secondary: #00D1B2;
+  --color-accent: #FACC15;
+  --color-danger: #FF4D6D;
+  --text-main: #F5F5F7;
+  --text-muted: #A1A1AA;
+  --border-strong: #2E2E3A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(124, 92, 255, 0.2), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(250, 204, 21, 0.14), transparent 24%),
+    radial-gradient(circle at 70% 90%, rgba(0, 209, 178, 0.12), transparent 26%),
+    var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-space), system-ui, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

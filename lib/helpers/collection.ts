@@ -12,9 +12,9 @@ export const categoryLabel: Record<ItemCategory, string> = {
 };
 
 export const categoryColor: Record<ItemCategory, string> = {
-  card: "bg-vault-primary text-vault-text",
-  banknote: "bg-vault-secondary text-vault-bg",
-  coin: "bg-vault-accent text-vault-bg",
+  card: "bg-vault-primary text-white",
+  banknote: "bg-vault-secondary text-vault-text",
+  coin: "bg-vault-accent text-vault-text",
 };
 
 export const totalCollectionValue = (items: Item[]) =>

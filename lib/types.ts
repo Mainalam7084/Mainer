@@ -12,7 +12,6 @@ export interface Item {
   purchase_place: string;
   notes: string;
   created_at: string;
-  rarity: Rarity;
 }
 
 export interface CardDetails {
@@ -39,4 +38,39 @@ export interface BanknoteDetails {
   currency: string;
   year: number;
   condition: string;
+}
+
+export type ItemDetails = CardDetails | CoinDetails | BanknoteDetails;
+
+export interface ItemWithDetails extends Item {
+  rarity: Rarity;
+  details: ItemDetails | null;
+}
+
+export interface ItemFilters {
+  search?: string;
+  category?: ItemCategory;
+  minPrice?: number;
+  maxPrice?: number;
+}
+
+export interface CreateItemInput {
+  name: string;
+  category: ItemCategory;
+  image_url: string;
+  price: number;
+  purchase_date: string;
+  purchase_place: string;
+  notes: string;
+  details: Omit<CardDetails, "item_id"> | Omit<CoinDetails, "item_id"> | Omit<BanknoteDetails, "item_id">;
+}
+
+export interface UpdateItemInput {
+  name: string;
+  image_url: string;
+  price: number;
+  purchase_date: string;
+  purchase_place: string;
+  notes: string;
+  details: Omit<CardDetails, "item_id"> | Omit<CoinDetails, "item_id"> | Omit<BanknoteDetails, "item_id">;
 }

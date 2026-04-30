@@ -15,8 +15,8 @@ export function StatCard({
   suffix?: string;
 }) {
   return (
-    <article className="rounded-vault border-2 border-vault-border bg-vault-card p-4 shadow-vault transition-all duration-200 hover:-translate-y-1 hover:shadow-vault-hover">
-      <div className="mb-3 inline-flex rounded-lg border-2 border-vault-border bg-vault-soft p-2">
+    <article className="rounded-vault border-[3px] border-vault-border bg-vault-card p-4 shadow-vault transition-all duration-200 hover:-translate-y-1 hover:shadow-vault-hover">
+      <div className="mb-3 inline-flex rounded-lg border-[3px] border-vault-border bg-vault-accent p-2">
         {icon}
       </div>
       <p className="text-sm font-medium text-vault-muted">{label}</p>

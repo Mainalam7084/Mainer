@@ -6,13 +6,13 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export function Button({ variant = "primary", className = "", ...props }: ButtonProps) {
   const base =
-    "rounded-lg border-2 px-4 py-2 text-sm font-bold transition-all duration-200 hover:-translate-y-0.5";
+    "rounded-lg border-[3px] px-4 py-2 text-sm font-extrabold transition-all duration-200 hover:-translate-y-0.5";
   const styles = {
     primary:
-      "border-vault-primary bg-vault-primary text-vault-text shadow-vault hover:shadow-vault-hover",
+      "border-vault-border bg-vault-primary text-white shadow-vault hover:shadow-vault-hover",
     secondary:
-      "border-vault-secondary bg-vault-secondary text-vault-bg shadow-vault hover:shadow-vault-hover",
-    danger: "border-vault-danger bg-vault-danger text-vault-text shadow-vault hover:shadow-vault-hover",
+      "border-vault-border bg-vault-secondary text-vault-text shadow-vault hover:shadow-vault-hover",
+    danger: "border-vault-border bg-vault-danger text-white shadow-vault hover:shadow-vault-hover",
   };
 
   return <button className={`${base} ${styles[variant]} ${className}`} {...props} />;
